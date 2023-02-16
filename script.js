@@ -1,6 +1,6 @@
 let correctGuesses = 0;
 let incorrectGuesses = 0;
-const words = ["WELLCODE", "HANGMAN", "PROGRAMMING", "JAVASCRIPT", "SOFTWARE", "PYTHON", "HACKING", "MATHEMATICS", "OPTIMIZATION"]; // Lista de cuvinte posibile
+const words = ["WELLCODE", "HANGMAN", "PROGRAMMING", "JAVASCRIPT", "SOFTWARE", "PYTHON", "HACKING", "MATHEMATICS", "OPTIMIZATION"];
 let chosenWord = words[Math.floor(Math.random() * words.length)];
 let guessedLetters = [];
 const maxIncorrectGuesses = 7;
