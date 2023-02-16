@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <title>Hangman</title>
+</head>
+<body>
+<div class="card">
+    <div class="fs-1">
+        <div class="fw-bold">
+            <div class="card-header text-center bg-primary text-white">Hangman</div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <div class="card" id="game-board">
+            <div class="fs-1">
+                <div class="fw-bold">
+                    <div class="card-header text-center bg-primary text-white">Let's play Hangman</div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="text-center">
+                    <h3>Guess the word:</h3>
+                    <button onclick="startGame()">Start Game</button>
+                    <p id="word-blanks">_ _ _ _ _ _</p>
+                    <h4 id="incorrect-guesses">Incorrect guesses: 0</h4>
+                </div>
+                <div class="text-center">
+                    <p id="hangman-diagram">
+                        O<br>
+                        /|\<br>
+                        |<br>
+                        / \
+                    </p>
+                </div>
+                <div class="keyboard">
+                    <button onclick="addLetter('A')">A</button>
+                    <button onclick="addLetter('B')">B</button>
+                    <button onclick="addLetter('C')">C</button>
+                    <button onclick="addLetter('D')">D</button>
+                    <button onclick="addLetter('E')">E</button>
+                    <button onclick="addLetter('F')">F</button>
+                    <button onclick="addLetter('G')">G</button>
+                    <button onclick="addLetter('H')">H</button>
+                    <button onclick="addLetter('I')">I</button>
+                    <button onclick="addLetter('J')">J</button>
+                    <button onclick="addLetter('K')">K</button>
+                    <button onclick="addLetter('L')">L</button>
+                    <button onclick="addLetter('M')">M</button>
+                    <button onclick="addLetter('N')">N</button>
+                    <button onclick="addLetter('O')">O</button>
+                    <button onclick="addLetter('P')">P</button>
+                    <button onclick="addLetter('Q')">Q</button>
+                    <button onclick="addLetter('R')">R</button>
+                    <button onclick="addLetter('S')">S</button>
+                    <button onclick="addLetter('T')">T</button>
+                    <button onclick="addLetter('U')">U</button>
+                    <button onclick="addLetter('V')">V</button>
+                    <button onclick="addLetter('W')">W</button>
+                    <button onclick="addLetter('X')">X</button>
+                    <button onclick="addLetter('Y')">Y</button>
+                    <button onclick="addLetter('Z')">Z</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card" id="win-message">
+            <div class="fs-1">
+                <div class="fw-bold">
+                    <div class="card-header text-center bg-success text-white">Congratulations !!!</div>
+                </div>
+            </div>
+            <div class="card-body text-center" id="guessed-word">
+                <div class="text-center">
+                    <h3>You guessed the word!</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card" id="lost-message">
+            <div class="fs-1">
+                <div class="fw-bold">
+                    <div class="card-header text-center bg-danger text-white">Game Over</div>
+                </div>
+            </div>
+            <div class="card-body text-center" id="not-guessed-word">
+                <div class="text-center">
+                    <h3>You didn't guess the word!</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</div>
+</body>
+</html>
